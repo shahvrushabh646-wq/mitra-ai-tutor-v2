@@ -1,16 +1,15 @@
 {
   "name": "mitra-ai-tutor",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "vite build && esbuild server/vercelEntry.ts --bundle --platform=node --format=esm --packages=external --outfile=api/index.js",
+    "build": "vite build",
     "start": "NODE_ENV=production node server.ts",
     "preview": "vite preview",
-    "clean": "rm -rf dist server.js api/index.js",
-    "lint": "tsc --noEmit",
-    "test": "tsx firestore.rules.test.ts && tsx tests/mitra.test.ts && tsx tests/api.security.test.ts"
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
@@ -32,14 +31,12 @@
     "vite": "^8.3.0"
   },
   "devDependencies": {
-    "@firebase/eslint-plugin-security-rules": "^0.0.2",
     "@types/express": "^4.17.21",
     "@types/multer": "^2.3.0",
     "@types/node": "^22.14.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "esbuild": "^0.28.0",
-    "eslint": "^10.13.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "~5.8.3"
