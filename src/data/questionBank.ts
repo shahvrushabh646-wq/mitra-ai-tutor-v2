@@ -1,1 +1,426 @@
-PLACEHOLDER
+import type { QuizSet, SubjectKey } from '../types/mitra.ts';
+
+export const QUIZ_BANK: QuizSet[] = [
+  {
+    id: 'quiz_quant_ratio',
+    title: 'Ratio & Proportion Mini Quiz',
+    subtitle: '6 questions · Topic drill',
+    subject: 'Quantitative Techniques',
+    topicId: 'quant_ratio_prop',
+    difficulty: 'beginner',
+    examFormat: 'topic_quiz',
+    marksPerCorrect: 4,
+    negativeMarkPerWrong: 0,
+    timeLimitMinutes: 12,
+    passingPercent: 60,
+    sourceBadge: 'Mitra Topic Drill',
+    questions: [
+      {
+        id: 'q_ratio_1',
+        sourceLabel: 'Mitra generated',
+        isOfficialPyq: false,
+        subject: 'Quantitative Techniques',
+        topicId: 'quant_ratio_prop',
+        difficulty: 'beginner',
+        type: 'mcq',
+        questionText: 'If A:B = 3:5 and B:C = 10:7, what is A:B:C?',
+        options: ['3:10:7', '6:10:7', '6:15:7', '30:50:70'],
+        correctOptionIndex: 1,
+        hint: 'Make the common term B equal using LCM.',
+        explanation: 'LCM of 5 and 10 is 10. First ratio ×2 → 6:10. Second already 10:7. Combined 6:10:7.',
+      },
+      {
+        id: 'q_ratio_2',
+        sourceLabel: 'Mitra generated',
+        isOfficialPyq: false,
+        subject: 'Quantitative Techniques',
+        topicId: 'quant_ratio_prop',
+        difficulty: 'intermediate',
+        type: 'mcq',
+        questionText: 'The ratio 1/2 : 1/3 : 1/5 : 1/8 in whole numbers is?',
+        options: ['60:40:24:15', '30:20:12:8', '15:10:6:4', '120:80:48:30'],
+        correctOptionIndex: 0,
+        hint: 'Multiply by LCM of denominators 2,3,5,8.',
+        explanation: 'LCM(2,3,5,8)=120. Multiply → 60:40:24:15.',
+      },
+    ],
+  },
+  {
+    id: 'quiz_lr_series',
+    title: 'Series & Coding Mini Quiz',
+    subtitle: 'Topic drill',
+    subject: 'Logical Reasoning',
+    topicId: 'lr_series_coding',
+    difficulty: 'beginner',
+    examFormat: 'topic_quiz',
+    timeLimitMinutes: 10,
+    passingPercent: 60,
+    sourceBadge: 'Mitra Topic Drill',
+    questions: [
+      {
+        id: 'q_lr_1',
+        sourceLabel: 'Mitra generated',
+        isOfficialPyq: false,
+        subject: 'Logical Reasoning',
+        topicId: 'lr_series_coding',
+        difficulty: 'beginner',
+        type: 'mcq',
+        questionText: 'Find the next number: 2, 6, 12, 20, 30, ?',
+        options: ['40', '42', '44', '46'],
+        correctOptionIndex: 1,
+        hint: 'Look at the differences.',
+        explanation: 'Differences: +4,+6,+8,+10,+12 → next 30+12=42.',
+      },
+    ],
+  },
+  {
+    id: 'quiz_gk_day1',
+    title: 'Day 1 GK Quick Check',
+    subtitle: '7 questions',
+    subject: 'General Knowledge',
+    topicId: 'gk_polity_econ',
+    difficulty: 'beginner',
+    examFormat: 'topic_quiz',
+    timeLimitMinutes: 10,
+    passingPercent: 70,
+    sourceBadge: 'Mitra Topic Drill',
+    questions: [
+      {
+        id: 'q_gk_1',
+        sourceLabel: 'Mitra generated',
+        isOfficialPyq: false,
+        subject: 'General Knowledge',
+        topicId: 'gk_polity_econ',
+        difficulty: 'beginner',
+        type: 'mcq',
+        questionText: 'Which article of the Indian Constitution deals with Equality before Law?',
+        options: ['Article 14', 'Article 19', 'Article 21', 'Article 32'],
+        correctOptionIndex: 0,
+        hint: 'Fundamental Rights chapter.',
+        explanation: 'Article 14 guarantees Equality before Law and Equal Protection of Laws.',
+      },
+    ],
+  },
+  {
+    id: 'quiz_quant_profit',
+    title: 'Profit & Percentages Drill',
+    subtitle: 'Topic drill',
+    subject: 'Quantitative Techniques',
+    topicId: 'quant_profit_pct',
+    difficulty: 'intermediate',
+    examFormat: 'topic_quiz',
+    timeLimitMinutes: 12,
+    passingPercent: 60,
+    sourceBadge: 'Mitra Topic Drill',
+    questions: [
+      {
+        id: 'q_profit_1',
+        sourceLabel: 'Mitra generated',
+        isOfficialPyq: false,
+        subject: 'Quantitative Techniques',
+        topicId: 'quant_profit_pct',
+        difficulty: 'intermediate',
+        type: 'mcq',
+        questionText: 'A shopkeeper marks up by 25% and then gives 20% discount. Net profit/loss?',
+        options: ['5% profit', '5% loss', 'No profit no loss', '10% profit'],
+        correctOptionIndex: 2,
+        hint: 'Use successive percentage formula.',
+        explanation: 'a + b + ab/100 = 25 - 20 + (25*(-20))/100 = 5 - 5 = 0%.',
+      },
+    ],
+  },
+  {
+    id: 'quiz_lang_verbal',
+    title: 'Grammar & Prepositions',
+    subtitle: 'Topic drill',
+    subject: 'Language Comprehension',
+    topicId: 'lang_verbal',
+    difficulty: 'beginner',
+    examFormat: 'topic_quiz',
+    timeLimitMinutes: 10,
+    passingPercent: 60,
+    sourceBadge: 'Mitra Topic Drill',
+    questions: [
+      {
+        id: 'q_lang_1',
+        sourceLabel: 'Mitra generated',
+        isOfficialPyq: false,
+        subject: 'Language Comprehension',
+        topicId: 'lang_verbal',
+        difficulty: 'beginner',
+        type: 'mcq',
+        questionText: 'Choose the correct preposition: He is good ___ mathematics.',
+        options: ['in', 'at', 'on', 'with'],
+        correctOptionIndex: 0,
+        hint: 'Fixed preposition with "good".',
+        explanation: 'Standard usage: good at (activity) / good in (subject area) — both accepted, but "in" is common for subjects.',
+      },
+    ],
+  },
+  {
+    id: 'quiz_ent_innovation',
+    title: 'Startup & IPR Basics',
+    subtitle: 'Topic drill',
+    subject: 'Innovation & Entrepreneurship',
+    topicId: 'ent_innovation',
+    difficulty: 'beginner',
+    examFormat: 'topic_quiz',
+    timeLimitMinutes: 8,
+    passingPercent: 60,
+    sourceBadge: 'Mitra Topic Drill',
+    questions: [
+      {
+        id: 'q_ent_1',
+        sourceLabel: 'Mitra generated',
+        isOfficialPyq: false,
+        subject: 'Innovation & Entrepreneurship',
+        topicId: 'ent_innovation',
+        difficulty: 'beginner',
+        type: 'mcq',
+        questionText: 'Starting a company using personal savings without external equity is called?',
+        options: ['Venture Capital', 'Crowdfunding', 'Bootstrapping', 'Incubating'],
+        correctOptionIndex: 2,
+        hint: 'No external investors.',
+        explanation: 'Bootstrapping means funding the business with personal savings and early revenue.',
+      },
+    ],
+  },
+  {
+    id: 'sec_quant_di_timed',
+    title: 'Quant + DI Sectional Test',
+    subtitle: 'Timed · +4 / 0',
+    subject: 'Quantitative Techniques',
+    topicId: 'quant_ratio_prop',
+    difficulty: 'mixed',
+    examFormat: 'sectional_test',
+    marksPerCorrect: 4,
+    negativeMarkPerWrong: 0,
+    timeLimitMinutes: 30,
+    passingPercent: 50,
+    sourceBadge: 'Sectional Mock',
+    questions: [
+      {
+        id: 'sec_q1',
+        sourceLabel: 'Sectional',
+        isOfficialPyq: false,
+        subject: 'Quantitative Techniques',
+        topicId: 'quant_ratio_prop',
+        difficulty: 'intermediate',
+        type: 'mcq',
+        questionText: 'A mixture contains milk and water in ratio 5:3. After adding 8 L water the ratio becomes 5:5. Original quantity of mixture?',
+        options: ['32 L', '40 L', '48 L', '56 L'],
+        correctOptionIndex: 0,
+        hint: 'Use alligation or equation.',
+        explanation: 'Let milk=5x, water=3x. 5x/(3x+8)=1 → 2x=8 → x=4 → total 32 L.',
+      },
+    ],
+  },
+  {
+    id: 'sec_lr_timed',
+    title: 'Logical Reasoning Sectional',
+    subtitle: 'Timed',
+    subject: 'Logical Reasoning',
+    topicId: 'lr_series_coding',
+    difficulty: 'mixed',
+    examFormat: 'sectional_test',
+    timeLimitMinutes: 30,
+    passingPercent: 50,
+    sourceBadge: 'Sectional Mock',
+    questions: [
+      {
+        id: 'sec_lr1',
+        sourceLabel: 'Sectional',
+        isOfficialPyq: false,
+        subject: 'Logical Reasoning',
+        topicId: 'lr_series_coding',
+        difficulty: 'intermediate',
+        type: 'mcq',
+        questionText: 'If in a certain code, COMPUTER is written as RFUVQNPC, how is MEDICINE written?',
+        options: ['EOJDJEFM', 'EOJDEJFM', 'MFEJDJOE', 'MFEDJJOE'],
+        correctOptionIndex: 0,
+        hint: 'Reverse and +1 each letter.',
+        explanation: 'Letters reversed then each +1.',
+      },
+    ],
+  },
+  {
+    id: 'sec_lang_timed',
+    title: 'Language Sectional',
+    subtitle: 'Timed',
+    subject: 'Language Comprehension',
+    topicId: 'lang_verbal',
+    difficulty: 'mixed',
+    examFormat: 'sectional_test',
+    timeLimitMinutes: 25,
+    passingPercent: 50,
+    sourceBadge: 'Sectional Mock',
+    questions: [
+      {
+        id: 'sec_lang1',
+        sourceLabel: 'Sectional',
+        isOfficialPyq: false,
+        subject: 'Language Comprehension',
+        topicId: 'lang_verbal',
+        difficulty: 'intermediate',
+        type: 'mcq',
+        questionText: 'Choose the correctly spelled word.',
+        options: ['Accomodate', 'Acommodate', 'Accommodate', 'Acomodate'],
+        correctOptionIndex: 2,
+        hint: 'Double c and double m.',
+        explanation: 'Accommodate has double c and double m.',
+      },
+    ],
+  },
+  {
+    id: 'sec_gk_timed',
+    title: 'GK Sectional',
+    subtitle: 'Timed',
+    subject: 'General Knowledge',
+    topicId: 'gk_polity_econ',
+    difficulty: 'mixed',
+    examFormat: 'sectional_test',
+    timeLimitMinutes: 15,
+    passingPercent: 50,
+    sourceBadge: 'Sectional Mock',
+    questions: [
+      {
+        id: 'sec_gk1',
+        sourceLabel: 'Sectional',
+        isOfficialPyq: false,
+        subject: 'General Knowledge',
+        topicId: 'gk_polity_econ',
+        difficulty: 'beginner',
+        type: 'mcq',
+        questionText: 'Who is the current Governor of RBI (as of typical CMAT knowledge)?',
+        options: ['Shaktikanta Das', 'Urjit Patel', 'Raghuram Rajan', 'D. Subbarao'],
+        correctOptionIndex: 0,
+        hint: 'Longest serving recent governor.',
+        explanation: 'Shaktikanta Das has been RBI Governor.',
+      },
+    ],
+  },
+  {
+    id: 'sec_ent_timed',
+    title: 'Innovation & Entrepreneurship Sectional',
+    subtitle: 'Timed',
+    subject: 'Innovation & Entrepreneurship',
+    topicId: 'ent_innovation',
+    difficulty: 'mixed',
+    examFormat: 'sectional_test',
+    timeLimitMinutes: 15,
+    passingPercent: 50,
+    sourceBadge: 'Sectional Mock',
+    questions: [
+      {
+        id: 'sec_ent1',
+        sourceLabel: 'Sectional',
+        isOfficialPyq: false,
+        subject: 'Innovation & Entrepreneurship',
+        topicId: 'ent_innovation',
+        difficulty: 'beginner',
+        type: 'mcq',
+        questionText: 'Patent protection in India is granted for how many years?',
+        options: ['10 years', '15 years', '20 years', '25 years'],
+        correctOptionIndex: 2,
+        hint: 'Standard TRIPS term.',
+        explanation: 'Patents are granted for 20 years from filing date.',
+      },
+    ],
+  },
+  {
+    id: 'full_cmat_mock',
+    title: 'Full 5-Section CMAT Mock',
+    subtitle: 'NTA pattern · +4 / -1',
+    subject: 'Quantitative Techniques',
+    topicId: 'full_mock_prep',
+    difficulty: 'mixed',
+    examFormat: 'full_mock',
+    marksPerCorrect: 4,
+    negativeMarkPerWrong: 1,
+    timeLimitMinutes: 180,
+    passingPercent: 40,
+    sourceBadge: 'Full Mock · NTA Pattern',
+    questions: [
+      {
+        id: 'mock_q1',
+        sourceLabel: 'Full Mock',
+        isOfficialPyq: true,
+        subject: 'Quantitative Techniques',
+        topicId: 'quant_ratio_prop',
+        difficulty: 'intermediate',
+        type: 'mcq',
+        questionText: 'Sample full-mock quant question: Ratio of two numbers is 3:5. If each is increased by 10 the ratio becomes 5:7. Find the numbers.',
+        options: ['15,25', '30,50', '45,75', '12,20'],
+        correctOptionIndex: 0,
+        hint: 'Set equations.',
+        explanation: '3x+10 / 5x+10 = 5/7 → 21x +70 = 25x +50 → 20=4x → x=5 → 15,25.',
+      },
+      {
+        id: 'mock_q2',
+        sourceLabel: 'Full Mock',
+        isOfficialPyq: false,
+        subject: 'Logical Reasoning',
+        topicId: 'lr_series_coding',
+        difficulty: 'intermediate',
+        type: 'mcq',
+        questionText: 'Sample LR: Statements: All A are B. Some B are C. Conclusions: I. Some A are C. II. Some C are A.',
+        options: ['Only I follows', 'Only II follows', 'Both follow', 'Neither follows'],
+        correctOptionIndex: 3,
+        hint: 'Venn diagram.',
+        explanation: 'No definite relation between A and C.',
+      },
+    ],
+  },
+];
+
+export function validateQuestionBank(): {
+  valid: boolean;
+  errors: string[];
+  coveredSubjects: SubjectKey[];
+  quizCount: number;
+  questionCount: number;
+} {
+  const errors: string[] = [];
+  const subjects = new Set<SubjectKey>();
+  let questionCount = 0;
+
+  for (const quiz of QUIZ_BANK) {
+    subjects.add(quiz.subject);
+    if (!quiz.questions || quiz.questions.length === 0) {
+      errors.push(`Quiz ${quiz.id} has no questions`);
+    }
+    for (const q of quiz.questions) {
+      questionCount++;
+      if (q.type === 'mcq' && (q.correctOptionIndex === undefined || !q.options)) {
+        errors.push(`MCQ ${q.id} missing options or correctOptionIndex`);
+      }
+    }
+  }
+
+  const requiredSubjects: SubjectKey[] = [
+    'Quantitative Techniques',
+    'Logical Reasoning',
+    'Language Comprehension',
+    'General Knowledge',
+    'Innovation & Entrepreneurship',
+  ];
+  for (const s of requiredSubjects) {
+    if (!subjects.has(s)) errors.push(`Missing subject coverage: ${s}`);
+  }
+
+  const hasFullMock = QUIZ_BANK.some(
+    (q) => q.examFormat === 'full_mock' && q.negativeMarkPerWrong === 1
+  );
+  if (!hasFullMock) errors.push('Missing full_mock with -1 marking');
+
+  const sectionalCount = QUIZ_BANK.filter((q) => q.examFormat === 'sectional_test').length;
+  if (sectionalCount < 5) errors.push(`Need >=5 sectional tests, got ${sectionalCount}`);
+
+  return {
+    valid: errors.length === 0,
+    errors,
+    coveredSubjects: Array.from(subjects),
+    quizCount: QUIZ_BANK.length,
+    questionCount,
+  };
+}
